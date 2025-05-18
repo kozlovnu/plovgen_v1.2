@@ -1,0 +1,103 @@
+
+body {
+  background-color: #1e1a16;
+  color: #f5deb3;
+  font-family: "Courier New", monospace;
+  padding: 1.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+}
+
+#scene-image img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+button {
+  background-color: #3e3a32;
+  color: #f5deb3;
+  font-family: "Courier New", monospace;
+  border: 2px solid #f5deb3;
+  padding: 12px 24px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #6b5f4b;
+  transform: scale(1.05);
+}
+
+#scene-choices {
+  margin-top: 1rem;
+}
+
+
+/* === Адаптация для отсутствия прокрутки === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", monospace;
+  background-color: #1e1a16;
+  color: #f5deb3;
+}
+
+#scene {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#scene-image img {
+  max-width: 100%;
+  max-height: 30vh;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+#scene-text {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#scene-choices button {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #333;
+  color: #ffd700;
+  border: 1px solid #666;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#scene-choices {
+  max-height: 30vh;
+  overflow-y: auto;
+}
